@@ -13,7 +13,7 @@ while True:
 
         todos.append(a)
 
-        functions.write_todo("todo.txt",todos)
+        functions.write_todo(todos, "todo.txt")
 
     elif 'show' in user_prompt:
         todos = functions.get_todo("todo.txt")

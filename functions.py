@@ -1,10 +1,12 @@
-def get_todo(filename):
+FILENAME = "todo.txt"
+
+def get_todo(filename=FILENAME):
     with open(filename, 'r') as file:
         todos = file.readlines()
 
     return todos
 
-def write_todo(filename,todo):
+def write_todo(todo, filename=FILENAME):
     with open(filename, 'w') as file:
         file.writelines(todo)
 
