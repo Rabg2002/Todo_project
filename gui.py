@@ -18,7 +18,7 @@ while True:
             todos = functions.get_todo("todo.txt")
             new_todo = values['todo'] + "\n"
             todos.append(new_todo)
-            functions.write_todo(todos)
+            functions.write_todo(todos, "todo.txt")
         case gui.WIN_CLOSED:
             break
     window.close()
