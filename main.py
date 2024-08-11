@@ -17,14 +17,14 @@ while True:
         functions.write_todo(todos, "todo.txt")
 
     elif 'show' in user_prompt:
-        todos = functions.get_todo("todo.txt")
+        todos = functions.get_todo( "todo.txt" )
 
         '''new_todos = []
         for i in todos:
             new_item = i.strip('\n')
             new_todos.append(new_item)'''
         
-        new_todos = [i.strip('\n') for i in todos]  #list comprehension
+        new_todos = [i.strip('\n') for i in todos]  # list comprehension
 
         for index,item in enumerate(new_todos):
             #item = item.strip('\n')

@@ -10,7 +10,7 @@ list_box = gui.Listbox(values=functions.get_todo(file), key ='todos',
 edit_button = gui.Button("Edit")
 
 window= gui.Window('My To-Do App', 
-                    layout=[[label], [input_box, add_button],[list_box, edit_button]], 
+                    layout=[ [label] , [input_box, add_button], [list_box, edit_button]], 
                     font = ('Helvetica', 10))
 
 while True:
@@ -23,7 +23,7 @@ while True:
             todos = functions.get_todo(file) 
             new_todo = values['todo'] + "\n"
             todos.append(new_todo)
-            functions.write_todo(todos, file)
+            functions.write_todo( todos, file)
             window['todos'].update(values=todos)
         case 'Edit':
             todo_to_edit = values['todos'][0]
