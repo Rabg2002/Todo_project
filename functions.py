@@ -1,3 +1,4 @@
+# Used for reading and writing todo.txt
 #filename = "todo.txt"
 
 def get_todo(filename):
