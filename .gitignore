@@ -1,6 +1,6 @@
 .vscode
 include
 Lib
-Scripts
+ScriptsS
 __pycache__
 pyvenv.cfg
