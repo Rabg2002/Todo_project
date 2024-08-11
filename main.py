@@ -6,7 +6,7 @@ print(now)
 
 while True:
     user_prompt = input("Type add,show,edit,completed or exit:")
-    todo = user_prompt.strip()
+    todo= user_prompt.strip()
     if 'add' in user_prompt:
         a = input("Enter a todo: ") + "\n"
 

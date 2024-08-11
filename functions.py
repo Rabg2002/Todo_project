@@ -12,5 +12,5 @@ def write_todo(todo, filename):
 
 if __name__ == "__main__":
     a = get_todo("todo.text")
-    print(a)
+    print( a )
     

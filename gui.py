@@ -9,7 +9,7 @@ list_box = gui.Listbox(values=functions.get_todo(file), key ='todos',
                         enable_events=False , size=[45, 10])
 edit_button = gui.Button("Edit")
 
-window = gui.Window('My To-Do App', 
+window= gui.Window('My To-Do App', 
                     layout=[[label], [input_box, add_button],[list_box, edit_button]], 
                     font = ('Helvetica', 10))
 
