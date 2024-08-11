@@ -1,7 +1,7 @@
 import functions
 import FreeSimpleGUI as gui
 
-file = 'Projects/Todo_list/myvenv/todo.txt'
+file= 'Projects/Todo_list/myvenv/todo.txt'
 label = gui.Text("Type in a to-do")
 input_box = gui.InputText(tooltip="Enter todo", key="todo")
 add_button = gui.Button("Add")

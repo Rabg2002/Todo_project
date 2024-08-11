@@ -1,4 +1,4 @@
-#FILENAME = "todo.txt"
+#filename = "todo.txt"
 
 def get_todo(filename):
     with open(filename, 'r') as file:

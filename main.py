@@ -3,6 +3,7 @@ import functions
 import time
 now = time.strftime("%b %d, %Y %H:%M:%S")
 print(now)
+
 while True:
     user_prompt = input("Type add,show,edit,completed or exit:")
     todo = user_prompt.strip()
