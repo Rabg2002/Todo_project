@@ -30,14 +30,17 @@ while True:
             functions.write_todo( todos, file)
             window['todos'].update(values=todos)
         case 'Edit':
-            todo_to_edit = values['todos'][0]
-            new_todo = values['todo'] + "\n"
+            try:
+                todo_to_edit = values['todos'][0]
+                new_todo = values['todo'] + "\n"
 
-            todos = functions.get_todo(file)  
-            index = todos.index(todo_to_edit)
-            todos[index] = new_todo
-            functions.write_todo(todos, file)
-            window['todos'].update(values=todos)
+                todos = functions.get_todo(file)  
+                index = todos.index(todo_to_edit)
+                todos[index] = new_todo
+                functions.write_todo(todos, file)
+                window['todos'].update(values=todos)
+            except IndexError:
+                print("Index Error Found!")
         case 'Complete':
             todo_to_complete = values['todos'][0]
             todos = functions.get_todo(file)
