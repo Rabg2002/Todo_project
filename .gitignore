@@ -4,3 +4,6 @@ Lib
 Scripts
 __pycache__
 pyvenv.cfg
+gui.spec
+build
+dist
