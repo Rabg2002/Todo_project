@@ -1,7 +1,9 @@
 import functions
-import FreeSimpleGUI as gui
+import FreeSimpleGUI as gui 
+import time
 
 file= 'Projects/Todo_project/todo.txt'
+clock = gui.Text('', key = 'clock')
 label = gui.Text("Type in a to-do")
 input_box = gui.InputText(tooltip="Enter todo", key="todo")
 add_button = gui.Button("Add")
@@ -12,16 +14,19 @@ comp_button = gui.Button("Complete")
 exit_button = gui.Button("Exit")
 
 window= gui.Window('My To-Do App', 
-                    layout=[ [label] , [input_box, add_button], 
-                    [list_box, edit_button, comp_button],
-                    [exit_button]], 
-                    font = ('Helvetica', 10))
+                    layout=[[clock], 
+                            [label], 
+                            [input_box, add_button], 
+                            [list_box, edit_button, comp_button],
+                            [exit_button]], 
+                            font = ('Helvetica', 10))
 
 while True:
-    event, values = window.read()
+    event, values = window.read(timeout=200)
     print(1, event)
     print(2, values)
     print(3, values['todos'])
+    window["clock"].update(value = time.strftime("%b %d, %Y %H:%M:%S"))
     match event:
         case 'Add':
             todos = functions.get_todo(file) 
