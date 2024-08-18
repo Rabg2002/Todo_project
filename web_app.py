@@ -2,7 +2,6 @@ import streamlit as str
 import functions
 
 todos = functions.get_todo("todo.txt")
-#file = "F:/MyWorldOfBinary/Projects/Todo_project/todo.txt"
 def add_todo():
     todo = str.session_state["new_todo"] + "\n"
     print(todo)
@@ -16,7 +15,7 @@ str.write("This is to increase your productivity")
 
 for index , todo in enumerate(todos):
     checkbox = str.checkbox(todo, key=todo)
-    if checkbox == True :
+    if checkbox:
         todos.pop(index)
         functions.write_todo(todos, "todo.txt")
         del str.session_state[todo]

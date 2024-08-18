@@ -4,6 +4,6 @@ Lib
 Scripts
 __pycache__
 pyvenv.cfg
-gui.spec
+Todo_App.spec
 build
-dist
+share
